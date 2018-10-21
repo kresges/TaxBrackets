@@ -1,10 +1,11 @@
 language: cpp
 
 compiler:
-  - gcc
+  - g++
 
 before_script:
   - cmake .
 
 script:
   - make
+  - ctest
