@@ -3,3 +3,6 @@
 
 ### Future Work and Goals
 Setup Gmock/Gtests
+
+### Tracis CI Info 
+https://travis-ci.org/kresges/TaxBrackets
