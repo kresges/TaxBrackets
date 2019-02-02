@@ -1,12 +1,14 @@
 cmake_minimum_required(VERSION 2.8.9)
-project(taxes)
 
-include_directories(inc)
+include_directories(app taxBrackets)
 
-file(GLOB SOURCES "src/*.cpp")
+file(GLOB SOURCES "app/src/*.cpp" "taxBrackets/src/*.cpp")
+#file(GLOB SOURCES "taxBrackets/src/*.cpp")
 file(GLOB TESTS "test/*.cpp")
 
+set( CMAKE_CXX_COMPILER "/usr/bin/g++" )
 set(CMAKE_CXX_STANDARD 11)
+project(taxes)
 
 add_executable(taxes ${SOURCES})
 add_library(taxes_lib ${SOURCES})
