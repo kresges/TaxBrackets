@@ -3,6 +3,8 @@ language: cpp
 compiler:
   - g++
 
+packages: libboost-all-dev
+
 before_script:
   - cmake .
 
