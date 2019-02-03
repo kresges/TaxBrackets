@@ -24,11 +24,12 @@ public:
 
 private:
 	//Methods
-	void parseTaxBrackets_();
+	void parseTaxInformation_();
+	void parseTaxBrackets_(ptree & input);
 
 	// Variables
 	std::string instanceName_;
-
+	double standardDeduction_;
 	std::map<double,double> brackets_;
 
 };

@@ -9,6 +9,6 @@ int main(int argc, char *argv[])
 
     std::cout << tb->getInstanceName() << std::endl;
     double income = 100000.00;
-    std::cout << "Tax Liability: " << tb->getTaxLiability(income) << " on " << income << "$" << std::endl;
+    //std::cout << "Tax Liability: " << tb->getTaxLiability(income) << " on " << income << "$" << std::endl;
     return 0;
 }

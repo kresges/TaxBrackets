@@ -4,7 +4,7 @@
 taxBrackets::taxBrackets(const std::string & instanceName)
 {
 	instanceName_ = instanceName;
-	parseTaxBrackets_();
+	parseTaxInformation_();
 }
 
 taxBrackets::~taxBrackets(){};
@@ -17,7 +17,7 @@ std::string taxBrackets::getInstanceName()
 // Public Methods
 double taxBrackets::getTaxLiability(const double & income)
 {
-	double remaining = income;
+	double remaining = income - standardDeduction_;
 	double liability = 0;
 
 	for (auto it = brackets_.rbegin(); it != brackets_.rend(); ++it)
@@ -38,20 +38,29 @@ double taxBrackets::getTaxLiability(const double & income)
 	return liability;
 }
 
-// remaining < last bracket : skip bracket 
-// remaining > last bracket : (remaining - last bracket) * Rate
-// remaining -= last bracket
-
-
-
 
 //  Private Methods
-void taxBrackets::parseTaxBrackets_()
+void taxBrackets::parseTaxInformation_()
+{
+	ptree input;
+	json_parser::read_json("taxBrackets_2018.json", input);
+
+	for( auto & item : input )
+	{
+		if( item.first == "standard deduction" )
+		{
+			standardDeduction_ = item.second.get_value<double>();
+		}
+		else if( item.first == "brackets" )
+		{
+			parseTaxBrackets_(item.second);
+		}
+	}
+}
+
+void taxBrackets::parseTaxBrackets_(ptree & input)
 {
 	double n;
-	ptree input;
-
-	json_parser::read_json("taxBrackets_2018.json", input);
 
 	for( auto & bracket : input )
 	{
