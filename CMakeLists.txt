@@ -9,6 +9,7 @@ file(GLOB TESTS "test/*.cpp")
 set( CMAKE_CXX_COMPILER "/usr/bin/g++" )
 set( CMAKE_CXX_STANDARD 11 )
 set (BOOST_ROOT "/usr/local/include/")
+
 project(taxes)
 
 add_executable(taxes ${SOURCES})
