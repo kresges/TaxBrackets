@@ -2,6 +2,6 @@
 #define MAIN_H
 
 #include <iostream>
-#include "taxBrackets.h"
+#include "taxBrackets/taxBrackets.h"
 
 #endif

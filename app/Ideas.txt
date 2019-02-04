@@ -1,0 +1,21 @@
+Classes 
+	-Annuity 
+	-Document intake
+	-Personal
+
+
+	Personal net worth
+		- Debt
+			-Student Loans
+		- Asset 
+			-Salary
+			-capital gains
+			-House
+			-Stock
+			-Dividends
+
+
+
+Goals:
+	- Burn down calculator
+		(take net worth, cash flow) return time to bankruptcy. 

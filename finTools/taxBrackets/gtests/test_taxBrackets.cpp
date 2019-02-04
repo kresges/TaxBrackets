@@ -1,7 +1,7 @@
 #include <iostream>
 #include "gtest/gtest.h"
 
-#include "taxBrackets.h"
+#include "taxBrackets/taxBrackets.h"
 
 class taxBracketTest : public ::testing::Test
 {

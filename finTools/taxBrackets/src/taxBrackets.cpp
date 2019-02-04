@@ -1,5 +1,5 @@
 // taxBrackets
-#include "taxBrackets.h"
+#include "taxBrackets/taxBrackets.h"
 
 taxBrackets::taxBrackets(const std::string & instanceName)
 {
@@ -43,7 +43,7 @@ double taxBrackets::getTaxLiability(const double & income)
 void taxBrackets::parseTaxInformation_()
 {
 	ptree input;
-	json_parser::read_json("taxBrackets_2018.json", input);
+	json_parser::read_json("files/taxBrackets_2018.json", input);
 
 	for( auto & item : input )
 	{
