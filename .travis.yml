@@ -3,8 +3,8 @@ language: cpp
 compiler:
   - g++
 
-addons: 
-  apt: 
+addons:
+  apt:
     packages: libboost-all-dev
 
 before_script:
