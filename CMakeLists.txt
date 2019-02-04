@@ -10,8 +10,8 @@ set( CMAKE_CXX_STANDARD 11 )
 
 project(finApp)
 
-#set( CMAKE_LIBRARY_OUTPUT_DIRECTORY "lib" )
-#set( CMAKE_ARCHIVE_OUTPUT_DIRECTORY "lib" )
+set( CMAKE_LIBRARY_OUTPUT_DIRECTORY "lib" )
+set( CMAKE_ARCHIVE_OUTPUT_DIRECTORY "lib" )
 
 #finTools
 add_subdirectory(finTools)
